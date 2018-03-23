@@ -12,16 +12,14 @@
     "default_icon": "icon128.png",
     "default_popup": "popup.html"
   },
-  "background":{
-    "scripts" : ["eventPage.js"],
-    "persistent" : false
+  "content_scripts":[{
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["jquery-3.1.0.min.js","wa.js"]
+  }],
+  "background" : {
+    "scripts": ["background.js"],
+    "persistent": false
   },
-  "content_scripts":[
-    {
-      "matches" : ["https://web.whatsapp.com/*"],
-      "js" : ["content.js"]
-    }
-  ],
   "permissions" : [
     "tabs",
     "https://web.whatsapp.com/*"

@@ -1,21 +1,18 @@
 $(function () {
-    var res=[],i=0;
-
-    var reset = function () {
-        res=[];
-        i=0
-    }
-
-    var scrollBtn = document.getElementById("scrollBtn"),
-        resetBtn = document.getElementById("resetBtn");
-
-    scrollBtn.addEventListener('click',function (e) {
-        i +=1;
-        $('#ptag').text('counter: ' + i);
-        console.log(i);
+    $('#clearBtn').on('click',function () {
+        chrome.tabs.query({active : true , currentWindow : true}, function (tabs) {
+            chrome.tabs.executeScript(tabs[0].id , {
+                code : `document.getElementById("scrollbtn").style.display = "none";
+                        document.getElementById("resetbtn").style.display = "none";`
+            })
+        })
     })
-
-    resetBtn.addEventListener('click',function (e) {
-        reset();
+    $('#showBtn').on('click',function () {
+        chrome.tabs.query({active : true , currentWindow : true}, function (tabs) {
+            chrome.tabs.executeScript(tabs[0].id , {
+                code : `document.getElementById("scrollbtn").style.display = "block";
+                        document.getElementById("resetbtn").style.display = "block";`
+            })
+        })
     })
 })
