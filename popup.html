@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <title>Whatsapp finder</title>
-    <script src="jquery-3.1.0.min.js"></script>
     <script src="popup.js"></script>
     <style>
         #wrapper{
@@ -11,12 +10,34 @@
         }
 
         button{
-            padding: 15px;
-            background-color: deepskyblue;
-            margin: 15px;
-            font-size: 20px;
-            border: 2px solid;
+            color: #fff;
+            background-color: #26a69a;
+            text-align: center;
+            letter-spacing: .5px;
+            font-size: 14px;
+            outline: 0;
+            margin: 6px ; 
+            -webkit-transition: background-color .4s ease-out;
+            transition: background-color .4s ease-out;
             cursor: pointer;
+            border: none;
+            border-radius: 2px;
+            display: inline-block;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 16px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            -webkit-tap-highlight-color: transparent;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: normal;
+        }
+
+        button:hover{
+            background-color: #2bbbad;
+            -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+
         }
     </style>
 </head>
