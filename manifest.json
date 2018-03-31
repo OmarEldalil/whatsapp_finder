@@ -3,7 +3,7 @@
 
   "name": "Whatsapp Finder",
   "description": "To find all the contacts have whatsapp on their numbers.",
-  "version": "1.0",
+  "version": "2.0",
   "icons": {
     "128": "icon128.png"
   },
@@ -22,6 +22,7 @@
   },
   "permissions" : [
     "tabs",
-    "https://web.whatsapp.com/*"
+    "https://web.whatsapp.com/*",
+    "clipboardWrite"
   ]
 }
